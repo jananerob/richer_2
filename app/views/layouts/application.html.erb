@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Richer2</title>
+    <title>Richer_2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
-
   <body>
-    <%= notice %>
-    <%= alert %>
-    <%= yield %>
+    <%= render 'shared/navbar' %>
+    <div class='fixed-top'>
+      <% if notice %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <%= notice %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= alert %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% end %>
+    </div>
+    <main class='container mt-2'>
+      <%= yield %>
+    </main>
   </body>
 </html>
