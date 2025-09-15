@@ -22,7 +22,7 @@ class TransactionsController < ApplicationController
 
   # POST /transactions
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = current_user.transactions.build(transaction_params)
 
     if @transaction.save
       redirect_to transactions_url, notice: "Transaction was successfully created."
