@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_09_07_095238) do
+ActiveRecord::Schema[7.1].define(version: 2025_09_14_123114) do
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.float "exprected_cost"
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_09_07_095238) do
     t.float "amount", default: 0.0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
