@@ -56,12 +56,12 @@
         login_btn: 'Prihlásenie'
     registrations:
       new:
-        registration: 'Registrácia'
+        register: 'Registrácia'
         register_btn: 'Registrovať'
     shared:
       links:
-        register: 'SK/Register instead'
-        login: 'SK/Login instead'
+        register: 'Registrovať sa namiesto prihlásenia'
+        login: 'Prihlásiť sa namiesto registrovania'
   transactions:
     index:
       header: 'Transakcie'
