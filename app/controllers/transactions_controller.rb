@@ -42,7 +42,7 @@ class TransactionsController < ApplicationController
 
   # DELETE /transactions/1
   def destroy
-    @transaction.delete
+    @transaction.destroy!
     redirect_to transactions_url, notice: "Transaction was successfully destroyed.", status: :see_other
   end
 
